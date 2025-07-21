@@ -1,40 +1,61 @@
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav {
-  background-color: #333;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 1000;
-  transition: background-color 0.3s;
-}
-
-nav ul {
-  margin: 0;
-  padding: 10px;
+  padding: 15px 30px;
+  background-color: transparent;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
   list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: red;
+.nav-links a {
+  color: white;
   text-decoration: none;
-  padding: 10px;
-  transition: color 0.3s;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
 }
 
-nav ul li a:hover {
-  color: yellow;
+.nav-links a:hover {
+  background-color: #ffcc00;
+  color: #1e1e1e;
 }
 
-.scrolled {
-  background-color: #222;
+.content {
+  padding: 120px 30px 30px 30px;
+  text-align: center;
 }
